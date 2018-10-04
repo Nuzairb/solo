@@ -77,37 +77,43 @@ section {
 }
 
 
-/* =========================================================
+/* =========================================
                 Preloader
-============================================================ */
+============================================ */
 
-.preloader {
-    background-color: var(--color-white);
+#preloader {
+    background-color: #fff;
     position: fixed;
     top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
+    right: 0;
     z-index: 9999;
 }
 
-.status {
-    background-image: url(../img/preloader/preloader.gif);
+#status {
+    background-image: url("../img/preloader/preloader.gif");
     background-repeat: no-repeat;
-    width: 7rem;
-    height: 7rem;
+    width: 70px;
+    height: 70px;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    margin-top: -35px;
+    margin-left: -35px;
 }
 
 
-/*=============================================================
-                    Home Header
-==============================================================*/
+/* =========================================
+                Home
+============================================ */
 
-.home {
+#home {
+    background: none;
+    height: 100%;
+}
+
+#home-bg-video {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -115,16 +121,15 @@ section {
     transform: translateX(-50%) translateY(-50%);
     min-width: 100%;
     min-height: 100%;
-    width: 100vw;
-    height: 100vh;
+    width: auto;
+    height: auto;
     z-index: -1;
-    background: url(../video/solo.jpg) no-repeat;
+    background: url("../video/solo.jpg") no-repeat;
     background-size: cover;
-    background: none;
 }
 
-.home-overlay {
-    background-color: rgba(0, 0, 0, .8);
+#home-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -133,86 +138,121 @@ section {
     z-index: -1;
 }
 
-.home-content {
+#home-content {
     width: 100%;
     height: 100%;
     display: table;
 }
 
-.home-content-inner {
+#home-content-inner {
     display: table-cell;
     vertical-align: middle;
 }
 
-.home-heading h1 {
-    color: var(--color-white);
-    font-size: 6.5rem;
+#home-heading h1 {
+    color: #fff;
+    font-size: 65px;
     font-weight: 100;
     text-transform: uppercase;
     margin: 0;
     display: inline-block;
 }
 
-.home-heading h1 span {
-    color: var(--color-moon-yellow);
-    font-weight: 300;
+#home-heading h1 span {
+    color: #f4c613;
+    font-weight: 500;
 }
 
-.home-text p {
-    color: var(--color-white);
-    font-size: 1.7rem;
+#home-text p {
+    color: #fff;
+    font-size: 17px;
     font-weight: 100;
-    margin: .8rem 0 3rem 0;
+    margin: 8px 0 30px 0;
 }
 
 
-/* ===================================================
+/* =========================================
                 Buttons
-====================================================== */
+============================================ */
 
 .btn-general {
     font-family: 'Raleway', sans-serif;
-    border-radius: 2.8rem;
-    font-size: 1.3rem;
+    border-radius: 28px;
+    font-size: 13px;
     text-transform: uppercase;
-    margin: 0 .6rem;
-    padding: 1.2rem 4.6rem 1.2rem 4.6rem;
+    margin: 0 6px;
+    padding: 12px 46px 12px 46px;
+    -webkit-transition: all .5s;
     transition: all .5s;
-    border: 1px solid;
-    z-index: 10;
 }
 
 .btn-home {
-    color: var(--color-white);
-    border: 1px solid var(--color-white);
+    color: #fff;
+    border: 1px solid #fff;
 }
 
 .btn-home:hover,
 .btn-home:focus {
-    color: var(--color-white);
-    background-color: var(--color-moon-yellow);
-    border: 1px solid var(--color-moon-yellow);
+    color: #fff;
+    background-color: #f4c613;
+    border: 1px solid #f4c613;
+}
+
+.btn-yellow {
+    color: #fff;
+    border: 1px solid #f4c613;
+    background-color: #f4c613;
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus {
+    color: #fff;
+    background-color: #212226;
+    border: 1px solid #212226;
+}
+
+.btn-white {
+    color: #212226;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+.btn-white:hover,
+.btn-white:focus {
+    color: #fff;
+    background-color: #212226;
+    border: 1px solid #212226;
+}
+
+.btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 3px 15px;
+    border-radius: 4px;
+    font-size: 22px;
+    display: none;
 }
 
 
-/* ===============================================
+/* =========================================
                 Arrow Down
-================================================= */
+============================================ */
 
-.arrow-down {
+#arrow-down {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    bottom: 2rem;
-    color: var(--color-white);
-    font-size: 3rem;
-    width: 3rem;
-    height: 3rem;
+    bottom: 20px;
+    color: #fff;
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
     text-align: center;
+    margin-left: -16px;
     z-index: 1;
 }
 
-.arrow-down:hover,
-.arrow-down:focus {
-    color: var(--color-moon-yellow);
+#arrow-down:hover,
+#arrow-down:focus {
+    color: #f4c613;
 }
